@@ -75,9 +75,8 @@ export class EnterSmsComponent implements OnInit {
       .then(res => {
         if (!res.status.status) {
           const error: ValidationErrors = { notConfirmed: true };
-          this.smsInput.setErrors(error);
+          // this.smsInput.setErrors(error);
           this.getErrorMessage();
-          console.log(res.status.message);
         } else {
           this.router.navigate(['confirm-email']);
         }

@@ -78,8 +78,8 @@ export class LoginComponent implements OnInit {
         },
         allowShowPassword: true,
         allowForgotPassword: true,
-        allowSignUp: true,
-        allowLogin: true,
+        allowSignUp: false,
+        allowLogin: false,
         closable: true,
       }
     );
@@ -87,7 +87,7 @@ export class LoginComponent implements OnInit {
       this.authService.setSession(authResult);
       self.router.navigate(['my-tabs']);
     });
-    lock.show();
+    // lock.show();
   }
 
 }
