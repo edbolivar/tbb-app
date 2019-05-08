@@ -57,7 +57,7 @@ export class ConfirmEmailComponent implements OnInit {
     }
 
     checkPolicy() {
-        this.isCheckPolicy = !this.isCheckPolicy;
+        // this.isCheckPolicy = !this.isCheckPolicy;
     }
 
     onFirstNameChange(value: string) {
@@ -84,8 +84,8 @@ export class ConfirmEmailComponent implements OnInit {
 
         if (!this.firstNameMatcher.isError && !this.lastNameMatcher.isError) {
           this.displayConsentError = false;
-          this.user.firstName = this.firstName.value.trim();
-          this.user.lastName = this.lastName.value.trim();
+        //   this.user.firstName = this.firstName.value.trim();
+        //   this.user.lastName = this.lastName.value.trim();
           this.user.emailConsent = true;
           this.userService.addInfoToMailChimp(this.authService.userProfile.email, this.user.firstName, this.user.lastName)
           .then(res => {
