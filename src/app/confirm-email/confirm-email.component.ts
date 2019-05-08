@@ -16,6 +16,7 @@ export class NameErrorStateMatcher implements ErrorStateMatcher {
     templateUrl: './confirm-email.component.html',
     styleUrls: ['./confirm-email.component.scss']
 })
+
 export class ConfirmEmailComponent implements OnInit {
     constructor(private router: Router, private authService: AuthService, private userService: UserService) {}
 
